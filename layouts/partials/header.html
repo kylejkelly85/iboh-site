@@ -1,30 +1,35 @@
-<header id="608dead7-8d6d-432d-b858-c03b3241526e" class="px-25 flex justify-center items-center relative bg-[#e4e2de]">
-    <div id="websiteheader-388621dc" class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-4 md:px-0 flex flex-wrap items-center justify-between row-gap-[10px]">
+<!-- The background color stays 100% full width -->
+<header id="608dead7-8d6d-432d-b858-c03b3241526e" class="w-full bg-[#e4e2de]">
+    
+    <!-- The inner container handles the padding and centering -->
+    <div id="websiteheader-388621dc" class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-6 md:px-[80px] flex items-center justify-between gap-4">
         
-        <div class="order-1 flex items-center">
+        <!-- Logo Section -->
+        <div class="flex items-center">
             <a href="/" class="flex items-center">
                 <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
                 <img src="https://d1yei2z3i6k35z.cloudfront.net/16922306/69d5cbbac8cf19.85292328_iboh_black.png" alt="IBOH" class="h-10 w-auto block object-contain" />
             </a>
         </div>
 
-        <div class="grow order-2 md:flex justify-end hidden">
-            <nav id="menu-4db8b33d" class="min-h-[20px] flex justify-end items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center">
+            <nav id="menu-4db8b33d" class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
                 {{ range .Site.Menus.main }}
                     {{ if .Page }}
                         <a href="{{ .Page.RelPermalink }}" class="hover:text-iboh-dark transition duration-150">
                             {{ .Name }}
                         </a>
                     {{ else }}
-            <!-- Fallback if the page file doesn't exist in your content folder yet -->
                         <a href="{{ .URL | relURL }}" class="hover:text-iboh-dark transition duration-150">
                             {{ .Name }}
                         </a>
                     {{ end }}
-                 {{ end }}
+                {{ end }}
             </nav>
         </div>
 
+        <!-- Mobile Hamburger Button -->
         <div class="md:hidden flex items-center">
             <button type="button" class="flex flex-col gap-[5px] cursor-pointer focus:outline-none">
                 <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
