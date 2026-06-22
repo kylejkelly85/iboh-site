@@ -10,7 +10,14 @@
         <div class="flex items-center">
             <a href="/" class="flex items-center">
                 <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
-                <img src="https://d1yei2z3i6k35z.cloudfront.net/16922306/69d5cbbac8cf19.85292328_iboh_black.png" alt="IBOH" class="h-10 w-auto block object-contain" />
+                {{ with resources.Get "images/iboh_black.png" }}
+                    {{/* Process the local image file to a 40px tall AVIF automatically */}}
+                    {{ $logoAvif := .Resize "x40 avif" }}
+                    <img src="{{ $logoAvif.RelPermalink }}" width="{{ $logoAvif.Width }}" height="{{ $logoAvif.Height }}" alt="IBOH" class="h-10 w-auto block object-contain" />
+                {{ else }}
+                    <!-- Fallback text if the image asset file is missing -->
+                    <span class="text-xl font-bold">IBOH</span>
+                {{ end }}
             </a>
         </div>
 
