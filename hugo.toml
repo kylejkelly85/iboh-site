@@ -4,45 +4,45 @@ title = 'IBOH'
 [menus]
   [[menus.main]]
     name = 'About'
-    pageRef = '/about'
+    pageRef = '/about.md'
     weight = 10
   [[menus.main]]
     name = 'HHC Designation'
-    pageRef = '/designations'
+    pageRef = '/designations.md'
     weight = 20
   [[menus.main]]
     name = 'Code of Ethics'
-    pageRef = '/code-of-ethics'
+    pageRef = '/code-of-ethics.md'
     weight = 30
   [[menus.main]]
     name = 'Directory'
-    pageRef = '/directory'
+    pageRef = '/directory.md'
     weight = 40
   [[menus.main]]
     name = 'FAQ'
-    pageRef = '/frequently-asked-questions'
+    pageRef = '/frequently-asked-questions.md'
     weight = 50
  [[menus.footer]]
     name = 'About'
-    pageRef = '/about'
+    pageRef = '/about.md'
     weight = 10
   [[menus.footer]]
     name = 'HHC Designation'
-    pageRef = '/designations'
+    pageRef = '/designations.md'
     weight = 20
   [[menus.footer]]
     name = 'Code of Ethics'
-    pageRef = '/code-of-ethics'
+    pageRef = '/code-of-ethics.md'
     weight = 30
   [[menus.footer]]
     name = 'Directory'
-    pageRef = '/directory'
+    pageRef = '/directory.md'
     weight = 40
   [[menus.footer]]
     name = 'FAQ'
-    pageRef = '/frequently-asked-questions'
+    pageRef = '/frequently-asked-questions.md'
     weight = 50
   [[menus.footer]]
     name = 'Insights'
-    pageRef = '/insights'
+    pageRef = '/insights.md'
     weight = 60

@@ -11,8 +11,17 @@
         <div class="grow order-2 md:flex justify-end hidden">
             <nav id="menu-4db8b33d" class="min-h-[20px] flex justify-end items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
                 {{ range .Site.Menus.main }}
-                    <a href="{{ .URL | relURL }}" class="hover:text-iboh-dark transition duration-150">{{ .Name }}</a>
-                {{ end }}
+                    {{ if .Page }}
+                        <a href="{{ .Page.RelPermalink }}" class="hover:text-iboh-dark transition duration-150">
+                            {{ .Name }}
+                        </a>
+                    {{ else }}
+            <!-- Fallback if the page file doesn't exist in your content folder yet -->
+                        <a href="{{ .URL | relURL }}" class="hover:text-iboh-dark transition duration-150">
+                            {{ .Name }}
+                        </a>
+                    {{ end }}
+                 {{ end }}
             </nav>
         </div>
 
