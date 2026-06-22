@@ -1,9 +1,6 @@
 ---
 title: "About the International Board of Healing"
 ---
-
-# 
-
 ## Our Mission
 
 The International Board of Healing (IBOH) was founded on a simple conviction: holistic practitioners deserve institutional recognition for their work.
