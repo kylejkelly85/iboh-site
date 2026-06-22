@@ -1,7 +1,7 @@
 <header class="w-full bg-[#e4e2de] relative">
     
-    {{/* Unique ID to prevent conflicts, keeping DeepSeek's smart dynamic hashing */}}
-    {{ $menuId := printf "mobile-menu-%s" (delimit (shuffle (seq 1 10)) "" | sha1 | trunc 8 "") }}
+    {{/* Valid unique ID generation without using non-existent 'trunc' */}}
+    {{ $menuId := printf "mobile-menu-%s" (delimit (shuffle (seq 1 10)) "" | sha1 | substr 0 8) }}
     
     <input type="checkbox" id="{{ $menuId }}" class="peer hidden" />
 
@@ -15,7 +15,7 @@
             </a>
         </div>
 
-        <!-- Desktop Navigation (Using best-practice .Page properties) -->
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center">
             <nav class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
                 {{ $currentPage := . }}
@@ -54,7 +54,7 @@
 
     </div>
 
-    <!-- Mobile Menu Panel (Driven purely by the peer checkbox state) -->
+    <!-- Mobile Menu Panel -->
     <div class="hidden peer-checked:block md:hidden absolute left-0 top-full w-full bg-[#e4e2de] border-t border-black/5 z-50 shadow-lg">
         <nav class="flex flex-col p-6 space-y-4 text-[16px] font-medium text-iboh-logo-gray">
             {{ $currentPage := . }}
