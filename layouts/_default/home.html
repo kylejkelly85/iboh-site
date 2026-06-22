@@ -1,39 +1,10 @@
 {{ define "main" }}
-
-{{ partial "hero.html" . }}
-
-<section class="py-20">
-    <div class="container mx-auto">
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            {{ range first 3 (where site.RegularPages "Section" "programs") }}
-                {{ partial "card.html" . }}
-            {{ end }}
-
-        </div>
-
+<main class="homepage-container">
+    <header class="hero-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="page-content">
+        {{ .Content }}
     </div>
-</section>
-
-<section class="py-20 bg-gray-50">
-
-    <div class="container mx-auto">
-
-        <h2 class="text-3xl font-bold mb-10">
-            Latest News
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            {{ range first 3 (where site.RegularPages "Section" "news") }}
-                {{ partial "news-card.html" . }}
-            {{ end }}
-
-        </div>
-
-    </div>
-
-</section>
-
+</main>
 {{ end }}
