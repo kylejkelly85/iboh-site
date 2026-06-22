@@ -1,3 +1,33 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'My New Hugo Project'
+
+[[menus.main]]
+name = "About"
+url = "/about/"
+weight = 10
+
+[[menus.main]]
+name = "Programs"
+url = "/programs/"
+weight = 20
+
+[[menus.main]]
+name = "Resources"
+url = "/resources/"
+weight = 30
+
+[[menus.main]]
+name = "News"
+url = "/news/"
+weight = 40
+
+[[menus.main]]
+name = "Events"
+url = "/events/"
+weight = 50
+
+[[menus.main]]
+name = "Contact"
+url = "/contact/"
+weight = 60
