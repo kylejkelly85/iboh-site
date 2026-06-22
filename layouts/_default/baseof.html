@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     {{ partial "head.html" . }}
 </head>
-<body>
-    <!-- This is the critical line that grabs the content from index.html -->
-    {{ block "main" . }}{{ end }}
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col">
+
+    <!-- Global Header Placed Here -->
+    {{ partial "header.html" . }}
+
+    <!-- Dynamic Main Content Wrapper -->
+    <div class="flex-grow">
+        {{ block "main" . }}{{ end }}
+    </div>
+
+    <!-- Global Footer Placed Here -->
+    {{ partial "footer.html" . }}
+
 </body>
 </html>

@@ -1,14 +1,7 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-<title>
-{{ if .Title }}
-{{ .Title }} | {{ site.Title }}
-{{ else }}
-{{ site.Title }}
-{{ end }}
-</title>
-
-<meta name="description" content="{{ .Description }}">
-
-<link rel="stylesheet" href="/css/main.css">
+<!-- Tailwind via PostCSS Asset Pipeline -->
+{{ $styles := resources.Get "css/main.css" | toCSS | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">

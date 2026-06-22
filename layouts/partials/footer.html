@@ -1,51 +1,43 @@
-<footer class="bg-slate-900 text-white">
-
-    <div class="container mx-auto py-16">
-
-        <div class="grid md:grid-cols-4 gap-10">
-
-            <div>
-                <h3 class="font-bold mb-4">
-                    {{ site.Title }}
-                </h3>
-
-                <p>
-                    Organization description goes here.
+<footer class="bg-teal-950 text-slate-300 border-t border-teal-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+            <!-- Institutional Mission Summary Column -->
+            <div class="md:col-span-2 space-y-4">
+                <span class="font-bold text-xl tracking-tight text-white block">
+                    International Board of Healing
+                </span>
+                <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+                    Evaluating, credentialing, and advocating for holistic, intuitive, and integrative practitioners globally. Building trust between professional practice and public verification.
                 </p>
             </div>
 
+            <!-- Quick Links Navigation Column -->
             <div>
-                <h3 class="font-bold mb-4">
-                    About
-                </h3>
-
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/leadership/">Leadership</a></li>
+                <h3 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Credentials</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="/apply" class="hover:text-white transition duration-150">Application Portal</a></li>
+                    <li><a href="/process" class="hover:text-white transition duration-150">Requirements</a></li>
+                    <li><a href="/fee-schedule" class="hover:text-white transition duration-150">Fee Schedules</a></li>
                 </ul>
             </div>
 
+            <!-- Legal and Governance Column -->
             <div>
-                <h3 class="font-bold mb-4">
-                    Resources
-                </h3>
-
-                <ul>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/news/">News</a></li>
+                <h3 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Governance</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="/ethics" class="hover:text-white transition duration-150">Code of Ethics</a></li>
+                    <li><a href="/privacy" class="hover:text-white transition duration-150">Privacy Policy</a></li>
+                    <li><a href="/terms" class="hover:text-white transition duration-150">Terms of Service</a></li>
                 </ul>
             </div>
+        </div>
 
-            <div>
-                <h3 class="font-bold mb-4">
-                    Contact
-                </h3>
-
-                <p>info@example.org</p>
-            </div>
-
+        <!-- Copyright Line Rule Section -->
+        <div class="border-t border-teal-900 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <p>&copy; {{ now.Format "2006" }} International Board of Healing (IBOH). All rights reserved.</p>
+            <p class="tracking-wide">Board-Level Designation: HHC</p>
         </div>
 
     </div>
-
 </footer>
