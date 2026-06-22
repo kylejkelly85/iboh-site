@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-US" class="scroll-smooth antialiased">
 <head>
     {{ partial "head.html" . }}
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col">
+<body class="margin-0 bg-brand-cream text-brand-dark min-h-screen flex flex-col">
 
-    <!-- Global Header Placed Here -->
     {{ partial "header.html" . }}
 
-    <!-- Dynamic Main Content Wrapper -->
-    <div class="flex-grow">
+    <main class="flex-grow flex flex-col">
         {{ block "main" . }}{{ end }}
-    </div>
+    </main>
 
-    <!-- Global Footer Placed Here -->
     {{ partial "footer.html" . }}
 
 </body>

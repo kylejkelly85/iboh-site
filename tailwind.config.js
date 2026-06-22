@@ -1,19 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: [
-    "./layouts/**/*.html",
-    "./content/**/*.md",
-    "./content/**/*.html"
-  ],
   theme: {
     extend: {
       colors: {
         brand: {
-          darkTeal: '#234e52',
-          teal: '#319795',
+          cream: '#F7F5F0',
+          dark: '#0A0431', // The dark text color
+          gray: '#6B6B6B', // The paragraph color
+          teal: '#319795', // Button color
+          tealHover: '#2C7A7B',
+          footerBg: '#2C3E50', // Based on rgba(44, 62, 80) in the CSS
         }
-      }
+      },
     },
   },
-  plugins: [],
 }
