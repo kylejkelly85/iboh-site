@@ -1,8 +1,9 @@
 services:
   hugo:
     image: ghcr.io/gohugoio/hugo:latest
-    command: server --bind 0.0.0.0 --watch
+    # The command now installs node modules before launching the server
+    command: sh -c "npm install && hugo server --bind 0.0.0.0 --watch"
     volumes:
-      - .:/project # <-- Changed /src to /project
+      - .:/project
     ports:
       - "1313:1313"
