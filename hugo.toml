@@ -1,50 +1,51 @@
-locale = 'en-us'
-title = 'IBOH'
+locale = "en-us"
+title = "IBOH"
 
 [menus]
   [[menus.main]]
-    name = 'About'
-    pageRef = '/about.md'
+    name = "About"
+    pageRef = "/about.md"
     weight = 10
   [[menus.main]]
-    name = 'HHC Designation'
-    pageRef = '/designations.md'
+    name = "HHC Designation"
+    pageRef = "/designations.md"
     weight = 20
   [[menus.main]]
-    name = 'Code of Ethics'
-    pageRef = '/code-of-ethics.md'
+    name = "Code of Ethics"
+    pageRef = "/code-of-ethics.md"
     weight = 30
   [[menus.main]]
-    name = 'Directory'
-    pageRef = '/directory.md'
+    name = "Directory"
+    pageRef = "/directory.md"
     weight = 40
   [[menus.main]]
-    name = 'FAQ'
-    pageRef = '/frequently-asked-questions.md'
+    name = "FAQ"
+    pageRef = "/frequently-asked-questions.md"
     weight = 50
- [[menus.footer]]
-    name = 'About'
-    pageRef = '/about.md'
+
+  [[menus.footer]]
+    name = "About"
+    pageRef = "/about.md"
     weight = 10
   [[menus.footer]]
-    name = 'HHC Designation'
-    pageRef = '/designations.md'
+    name = "HHC Designation"
+    pageRef = "/designations.md"
     weight = 20
   [[menus.footer]]
-    name = 'Code of Ethics'
-    pageRef = '/code-of-ethics.md'
+    name = "Code of Ethics"
+    pageRef = "/code-of-ethics.md"
     weight = 30
   [[menus.footer]]
-    name = 'Directory'
-    pageRef = '/directory.md'
+    name = "Directory"
+    pageRef = "/directory.md"
     weight = 40
   [[menus.footer]]
-    name = 'FAQ'
-    pageRef = '/frequently-asked-questions.md'
+    name = "FAQ"
+    pageRef = "/frequently-asked-questions.md"
     weight = 50
   [[menus.footer]]
-    name = 'Insights'
-    pageRef = '/insights.md'
+    name = "Insights"
+    pageRef = "/insights.md"
     weight = 60
 
 [build]
@@ -56,11 +57,12 @@ title = 'IBOH'
   [[build.cachebusters]]
     source = '(postcss|tailwind)\.config\.js'
     target = 'css'
+
 [module]
   [[module.mounts]]
-    source = 'assets'
-    target = 'assets'
+    source = "assets"
+    target = "assets"
   [[module.mounts]]
     disableWatch = true
-    source = 'hugo_stats.json'
-    target = 'assets/notwatching/hugo_stats.json'
+    source = "hugo_stats.json"
+    target = "assets/notwatching/hugo_stats.json"
