@@ -1,13 +1,12 @@
 <header class="w-full bg-[#e4e2de] relative">
     
-    {{/* Valid unique ID generation without using non-existent 'trunc' */}}
-    {{ $menuId := printf "mobile-menu-%s" (delimit (shuffle (seq 1 10)) "" | sha1 | substr 0 8) }}
+    {{/* Solid, fixed ID to guarantee the template compiles flawlessly */}}
+    {{ $menuId := "mobile-nav-toggle-checkbox" }}
     
     <input type="checkbox" id="{{ $menuId }}" class="peer hidden" />
 
     <div class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-6 md:px-[80px] flex items-center justify-between gap-4">
         
-        <!-- Logo -->
         <div class="flex items-center">
             <a href="/" class="flex items-center">
                 <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
@@ -15,7 +14,6 @@
             </a>
         </div>
 
-        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center">
             <nav class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
                 {{ $currentPage := . }}
@@ -36,7 +34,6 @@
             </nav>
         </div>
 
-        <!-- Mobile Hamburger Button -->
         <div class="md:hidden flex items-center">
             <label 
                 for="{{ $menuId }}" 
@@ -54,7 +51,6 @@
 
     </div>
 
-    <!-- Mobile Menu Panel -->
     <div class="hidden peer-checked:block md:hidden absolute left-0 top-full w-full bg-[#e4e2de] border-t border-black/5 z-50 shadow-lg">
         <nav class="flex flex-col p-6 space-y-4 text-[16px] font-medium text-iboh-logo-gray">
             {{ $currentPage := . }}
