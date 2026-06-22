@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {{ partial "head.html" . }}
 </head>
-
-<body class="min-h-screen flex flex-col">
-
-    {{ partial "header.html" . }}
-
-    <main class="flex-grow">
-        {{ block "main" . }}{{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
-
+<body>
+    <!-- This is the critical line that grabs the content from index.html -->
+    {{ block "main" . }}{{ end }}
 </body>
 </html>
