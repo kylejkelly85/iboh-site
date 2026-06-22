@@ -9,10 +9,6 @@ The International Board of Healing (IBOH) evaluates, credentials, and advocates 
 
 {{< gallery >}}
 
-<div class="bg-red-500 text-white p-4 text-center">
-  If this bar is bright red with white text, Tailwind is working!
-</div>
-
 ## In an Unregulated Industry, Trust Is Your Greatest Asset
 
 Holistic healing is growing rapidly — but without universal standards, prospective clients have no reliable way to distinguish trained, ethical practitioners from unqualified ones. The IBOH exists to change that.
