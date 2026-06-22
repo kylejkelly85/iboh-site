@@ -2,6 +2,9 @@
 <html lang="en-US" class="scroll-smooth antialiased">
 <head>
     {{ partial "head.html" . }}
+    {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+  {{ end }}
 </head>
 <body class="margin-0 bg-brand-cream text-brand-dark min-h-screen flex flex-col">
 
