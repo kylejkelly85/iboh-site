@@ -1,68 +1,48 @@
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'IBOH'
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[[menus.main]]
-name = "About"
-url = "/about/"
-weight = 10
-
-[[menus.main]]
-name = "Programs"
-url = "/programs/"
-weight = 20
-
-[[menus.main]]
-name = "Resources"
-url = "/resources/"
-weight = 30
-
-[[menus.main]]
-name = "News"
-url = "/news/"
-weight = 40
-
-[[menus.main]]
-name = "Events"
-url = "/events/"
-weight = 50
-
-[[menus.main]]
-name = "Contact"
-url = "/contact/"
-weight = 60
-
-# Footer Navigation Menu Configuration
-[[menus.footer]]
-  name = "About"
-  url = "/about"
-  weight = 10
-
-[[menus.footer]]
-  name = "HHC Designation"
-  url = "/designations"
-  weight = 20
-
-[[menus.footer]]
-  name = "Code of Ethics"
-  url = "/code-of-ethics"
-  weight = 30
-
-[[menus.footer]]
-  name = "Directory"
-  url = "/verify"
-  weight = 40
-
-[[menus.footer]]
-  name = "FAQ"
-  url = "/frequently-asked-questions"
-  weight = 50
-
-[[menus.footer]]
-  name = "Insights"
-  url = "/insights"
-  weight = 60
+[menus]
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menus.main]]
+    name = 'HHC Designation'
+    pageRef = '/designations'
+    weight = 20
+  [[menus.main]]
+    name = 'Code of Ethics'
+    pageRef = '/code-of-ethics'
+    weight = 30
+  [[menus.main]]
+    name = 'Directory'
+    pageRef = '/directory'
+    weight = 40
+  [[menus.main]]
+    name = 'FAQ'
+    pageRef = '/frequently-asked-questions'
+    weight = 50
+ [[menus.footer]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menus.footer]]
+    name = 'HHC Designation'
+    pageRef = '/designations'
+    weight = 20
+  [[menus.footer]]
+    name = 'Code of Ethics'
+    pageRef = '/code-of-ethics'
+    weight = 30
+  [[menus.footer]]
+    name = 'Directory'
+    pageRef = '/directory'
+    weight = 40
+  [[menus.footer]]
+    name = 'FAQ'
+    pageRef = '/frequently-asked-questions'
+    weight = 50
+  [[menus.footer]]
+    name = 'Insights'
+    pageRef = '/insights'
+    weight = 60
