@@ -1,10 +1,13 @@
-<!-- The background color stays 100% full width -->
-<header id="608dead7-8d6d-432d-b858-c03b3241526e" class="w-full bg-[#e4e2de]">
+<header class="w-full bg-[#e4e2de] relative">
     
-    <!-- The inner container handles the padding and centering -->
-    <div id="websiteheader-388621dc" class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-6 md:px-[80px] flex items-center justify-between gap-4">
+    {{/* Unique ID to prevent conflicts, keeping DeepSeek's smart dynamic hashing */}}
+    {{ $menuId := printf "mobile-menu-%s" (delimit (shuffle (seq 1 10)) "" | sha1 | trunc 8 "") }}
+    
+    <input type="checkbox" id="{{ $menuId }}" class="peer hidden" />
+
+    <div class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-6 md:px-[80px] flex items-center justify-between gap-4">
         
-        <!-- Logo Section -->
+        <!-- Logo -->
         <div class="flex items-center">
             <a href="/" class="flex items-center">
                 <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
@@ -12,31 +15,65 @@
             </a>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Desktop Navigation (Using best-practice .Page properties) -->
         <div class="hidden md:flex items-center">
-            <nav id="menu-4db8b33d" class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
+            <nav class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
+                {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
+                    {{ $linkUrl := "" }}
                     {{ if .Page }}
-                        <a href="{{ .Page.RelPermalink }}" class="hover:text-iboh-dark transition duration-150">
-                            {{ .Name }}
-                        </a>
+                        {{ $linkUrl = .Page.RelPermalink }}
                     {{ else }}
-                        <a href="{{ .URL | relURL }}" class="hover:text-iboh-dark transition duration-150">
-                            {{ .Name }}
-                        </a>
+                        {{ $linkUrl = .URL | relURL }}
                     {{ end }}
+                    <a 
+                        href="{{ $linkUrl }}" 
+                        class="hover:text-iboh-dark transition duration-150 {{ if $currentPage.IsMenuCurrent "main" . }}font-bold text-iboh-dark{{ end }}"
+                    >
+                        {{ .Name }}
+                    </a>
                 {{ end }}
             </nav>
         </div>
 
         <!-- Mobile Hamburger Button -->
         <div class="md:hidden flex items-center">
-            <button type="button" class="flex flex-col gap-[5px] cursor-pointer focus:outline-none">
+            <label 
+                for="{{ $menuId }}" 
+                class="flex flex-col gap-[5px] cursor-pointer" 
+                role="button"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                tabindex="0"
+            >
                 <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
                 <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
                 <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
-            </button>
+            </label>
         </div>
 
+    </div>
+
+    <!-- Mobile Menu Panel (Driven purely by the peer checkbox state) -->
+    <div class="hidden peer-checked:block md:hidden absolute left-0 top-full w-full bg-[#e4e2de] border-t border-black/5 z-50 shadow-lg">
+        <nav class="flex flex-col p-6 space-y-4 text-[16px] font-medium text-iboh-logo-gray">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ $linkUrl := "" }}
+                {{ if .Page }}
+                    {{ $linkUrl = .Page.RelPermalink }}
+                {{ else }}
+                    {{ $linkUrl = .URL | relURL }}
+                {{ end }}
+                <label for="{{ $menuId }}" class="cursor-pointer">
+                    <a 
+                        href="{{ $linkUrl }}" 
+                        class="block hover:text-iboh-dark py-2 border-b border-black/5 transition duration-150 {{ if $currentPage.IsMenuCurrent "main" . }}font-bold{{ end }}"
+                    >
+                        {{ .Name }}
+                    </a>
+                </label>
+            {{ end }}
+        </nav>
     </div>
 </header>
