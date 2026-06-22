@@ -1,21 +1,28 @@
-<header class="bg-brand-cream border-b border-[#E9E9E9]">
-    <div class="max-w-[1120px] mx-auto h-[90px] flex items-center justify-between px-4 sm:px-0">
+<header id="608dead7-8d6d-432d-b858-c03b3241526e" class="w-full flex justify-center items-center relative bg-[#e4e2de]">
+    <div id="websiteheader-388621dc" class="w-full max-w-iboh-container mx-auto min-h-[60px] py-[25px] px-4 md:px-0 flex flex-wrap items-center justify-between row-gap-[10px]">
         
-        <a href="/" class="flex items-center">
-            <img src="https://d1yei2z3i6k35z.cloudfront.net/16922306/69d5cbbac8cf19.85292328_iboh_black.png" 
-                 alt="IBOH" 
-                 class="h-10 w-auto block object-contain"
-                 loading="lazy">
-        </a>
+        <div class="order-1 flex items-center">
+            <a href="/" class="flex items-center">
+                <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
+                <img src="https://d1yei2z3i6k35z.cloudfront.net/16922306/69d5cbbac8cf19.85292328_iboh_black.png" alt="IBOH" class="h-10 w-auto block object-contain" />
+            </a>
+        </div>
 
-        <nav class="hidden md:flex items-center space-x-8">
+        <div class="grow order-2 md:flex justify-end hidden">
+            <nav id="menu-4db8b33d" class="min-h-[20px] flex justify-end items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
+                {{ range .Site.Menus.main }}
+                    <a href="{{ .URL | relURL }}" class="hover:text-iboh-dark transition duration-150">{{ .Name }}</a>
+                {{ end }}
             </nav>
+        </div>
 
-        <button type="button" class="md:hidden flex flex-col justify-end items-end gap-[5px] cursor-pointer">
-            <span class="block w-[33px] h-1 bg-[#4A4A4A] rounded-[3px]"></span>
-            <span class="block w-[33px] h-1 bg-[#4A4A4A] rounded-[3px]"></span>
-            <span class="block w-[33px] h-1 bg-[#4A4A4A] rounded-[3px]"></span>
-        </button>
+        <div class="md:hidden flex items-center">
+            <button type="button" class="flex flex-col gap-[5px] cursor-pointer focus:outline-none">
+                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
+                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
+                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
+            </button>
+        </div>
 
     </div>
 </header>
