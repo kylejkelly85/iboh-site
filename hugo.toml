@@ -35,3 +35,34 @@ weight = 50
 name = "Contact"
 url = "/contact/"
 weight = 60
+
+# Footer Navigation Menu Configuration
+[[menus.footer]]
+  name = "About"
+  url = "/about"
+  weight = 10
+
+[[menus.footer]]
+  name = "HHC Designation"
+  url = "/designations"
+  weight = 20
+
+[[menus.footer]]
+  name = "Code of Ethics"
+  url = "/code-of-ethics"
+  weight = 30
+
+[[menus.footer]]
+  name = "Directory"
+  url = "/verify"
+  weight = 40
+
+[[menus.footer]]
+  name = "FAQ"
+  url = "/frequently-asked-questions"
+  weight = 50
+
+[[menus.footer]]
+  name = "Insights"
+  url = "/insights"
+  weight = 60
