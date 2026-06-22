@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="py-16">
+
+    <div class="container mx-auto">
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            {{ range .Pages }}
+
+                {{ partial "card.html" . }}
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}

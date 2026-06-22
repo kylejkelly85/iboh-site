@@ -1,0 +1,37 @@
+<header class="bg-white shadow">
+
+    <div class="container mx-auto">
+
+        <div class="flex items-center justify-between py-4">
+
+            <a href="/">
+                <img src="/images/logo.svg"
+                     alt="{{ site.Title }}"
+                     class="h-14">
+            </a>
+
+            <nav class="hidden lg:flex gap-8">
+
+                {{ range site.Menus.main }}
+
+                <a href="{{ .URL }}"
+                   class="font-medium hover:text-blue-600">
+                    {{ .Name }}
+                </a>
+
+                {{ end }}
+
+            </nav>
+
+            <button id="mobile-menu-button"
+                    class="lg:hidden">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+{{ partial "mobile-menu.html" . }}
