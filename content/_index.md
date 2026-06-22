@@ -1,16 +1,13 @@
-Board-Level Credentials for Holistic Practitioners
+---
+title: "Board-Level Credentials for Holistic Practitioners"
+layout: "home"
+---
 
 The International Board of Healing (IBOH) evaluates, credentials, and advocates for holistic, intuitive, and integrative practitioners worldwide. Earn the Holistic Healer Certified (HHC) designation and set yourself apart in a crowded, unregulated industry.
 
-[Apply for Your HHC Designation →](https://www.iboh.org/apply)
+{{< button url="https://www.iboh.org/apply" text="Apply for Your HHC Designation →" class="primary" >}}
 
-![](https://d1yei2z3i6k35z.cloudfront.net/16922306/69c21a8963a454.98245418_Firefly_Flux_Beautifulwomangirlholdingabottleofessentialoilwhiletestingitsittingona713591.jpg)
-
-![](https://d1yei2z3i6k35z.cloudfront.net/16922306/69d3bb214b9693.74718056_holistichealing.jpg)
-
-![](https://d1yei2z3i6k35z.cloudfront.net/16922306/69d3b9dfb5cd44.83939411_aholisticpractitionerandclientinanaturalprofessionalexchange.png)
-
-![](https://d1yei2z3i6k35z.cloudfront.net/16922306/69d3bb2edce4f9.51270994_practitionerinacalmwell-litconsultationsetting.png)
+{{< gallery >}}
 
 ## In an Unregulated Industry, Trust Is Your Greatest Asset
 
@@ -20,44 +17,30 @@ An IBOH Board Designation tells the world that you've been evaluated against pro
 
 This isn't about gatekeeping your gift. It's about giving your gift the professional recognition it deserves.
 
-Professional Distinction
+{{< features-grid >}}
 
-An IBOH Board Designation signals to clients, referral partners, and the public that you meet established ethical and professional standards — setting you apart from uncredentialed practitioners.
-
-Recognized Credentials
-
-Approved candidates earn the right to use the post-nominal letters "HHC" (Holistic Healer Certified) and display the official IBOH Board-Certified seal on websites, business cards, and marketing materials.
-
-Verified Registry Listing
-
-Every board-certified practitioner is listed in the IBOH Global Practitioner Directory — a searchable, public-facing registry where prospective clients and referral partners can instantly verify your standing.
-
-* * *
+---
 
 ## Built for Practitioners Across the Holistic Spectrum
 
 The HHC designation is designed for experienced practitioners across a wide range of holistic, integrative, and intuitive modalities, including but not limited to:
 
+{{< modalities-box >}}
 _Energy Healing & Reiki · Intuitive & Psychic Guidance · Somatic & Bodywork Practices · Herbalism & Naturopathy · Sound Healing · Breathwork · Life & Wellness Coaching · Crystal Healing · Shamanic Practices · Meditation & Mindfulness Facilitation · Aromatherapy · Holistic Nutrition · Spiritual Counseling · Hypnotherapy · Reflexology · Acupressure · EFT / Tapping · Ayurvedic Practices_
+{{< /modalities-box >}}
 
 Whether your practice is rooted in ancient traditions or modern integrative approaches, the IBOH provides a universal professional framework that transcends any single modality.
 
-[See the Full Certification Process →](https://www.iboh.org/process)
+{{< button url="https://www.iboh.org/process" text="See the Full Certification Process →" class="secondary" >}}
 
-Turn Your Calling Into a Recognized Profession
-
+{{< quote author="The IBOH Founding Team" >}}
 "We believe every dedicated holistic practitioner deserves the same professional recognition afforded to conventional health providers. The IBOH exists to build that bridge — between calling and career, between intuition and institutional trust."
+{{< /quote >}}
 
-The IBOH Founding Team
+* Clients who trust you before the first session — because they verified your credentials online
+* Referral partners who recommend you confidently, knowing you operate under a published code of ethics
+* The professional confidence that comes from being evaluated, recognized, and listed among vetted peers
 
-‣ Clients who trust you before the first session — because they verified your credentials online
-
-‣ Referral partners who recommend you confidently, knowing you operate under a published code of ethics
-
-‣ The professional confidence that comes from being evaluated, recognized, and listed among vetted peers
-
-Ready to Professionalize Your Practice?
-
+{{< cta-callout title="Ready to Professionalize Your Practice?" button_text="Apply for Your HHC Designation →" button_url="https://www.iboh.org/apply" >}}
 Begin your application for the Holistic Healer Certified (HHC) designation. The review process is thorough, fair, and designed to honor the diversity of holistic practice.
-
-[Apply for Your HHC Designation →](https://www.iboh.org/apply)
+{{< /cta-callout >}}

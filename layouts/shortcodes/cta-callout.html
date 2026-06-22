@@ -1,0 +1,5 @@
+<div class="cta-section">
+  <h3>{{ .Get "title" }}</h3>
+  <p>{{ .Inner | markdownify }}</p>
+  <a href="{{ .Get "button_url" | relURL }}" class="btn-primary">{{ .Get "button_text" }}</a>
+</div>

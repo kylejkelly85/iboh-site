@@ -1,0 +1,6 @@
+<div class="quote-block">
+  <p class="quote">{{ .Inner | markdownify }}</p>
+  {{ if .Get "author" }}
+    <p class="author">— {{ .Get "author" }}</p>
+  {{ end }}
+</div>
