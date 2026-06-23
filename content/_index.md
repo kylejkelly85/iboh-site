@@ -1,6 +1,10 @@
 ---
 title: "Board-Level Credentials for Holistic Practitioners"
-layout: "home"
+active_blocks:
+  - "support-banner"
+  - "hero-split"
+  - "body-content"
+  - "cta-callout"
 ---
 
 The International Board of Healing (IBOH) evaluates, credentials, and advocates for holistic, intuitive, and integrative practitioners worldwide. Earn the Holistic Healer Certified (HHC) designation and set yourself apart in a crowded, unregulated industry.
