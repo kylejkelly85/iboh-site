@@ -5,7 +5,7 @@
     
     {{/* Handles deferred compilation for Tailwind CSS v4 */}}
     {{ with (templates.Defer (dict "key" "global")) }}
-        {{ partial "_partials/css.html" . }}
+        {{ partial "css.html" . }}
     {{ end }}
 </head>
 <body class="bg-white text-gray-900 min-h-screen flex flex-col font-sans">
