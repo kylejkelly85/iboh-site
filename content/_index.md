@@ -6,9 +6,9 @@ active_blocks:
   - "body-content"
   - "cta-callout"
 ---
-The International Board of Healing (IBOH) evaluates, credentials, and advocates for holistic, intuitive, and integrative practitioners worldwide. Earn the Holistic Healer Certified (HHC) designation and set yourself apart in a crowded, unregulated industry.
-
+{{< center-heading >}}
 ## In an Unregulated Industry, Trust Is Your Greatest Asset
+{{< /center-heading >}}
 Holistic healing is growing rapidly — but without universal standards, prospective clients have no reliable way to distinguish trained, ethical practitioners from unqualified ones. The IBOH exists to change that.
 
 An IBOH Board Designation tells the world that you've been evaluated against professional standards, that you operate under a published Code of Ethics, and that your credentials can be independently verified.
@@ -18,7 +18,9 @@ This isn't about gatekeeping your gift. It's about giving your gift the professi
 {{< features-grid >}}
 
 ---
+{{< center-heading >}}
 ## Built for Practitioners Across the Holistic Spectrum
+{{< /center-heading >}}
 The HHC designation is designed for experienced practitioners across a wide range of holistic, integrative, and intuitive modalities, including but not limited to:
 
 {{< modalities-box >}}
