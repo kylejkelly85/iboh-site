@@ -1,3 +1,6 @@
-<a href="{{ .Get "url" | relURL }}" class="btn-{{ .Get "class" | default "primary" }}">
-  {{ .Get "text" }}
-</a>
+<div class="text-center my-10">
+    <a href="{{ .Get "url" | relURL }}"
+       class="inline-flex items-center justify-center btn-{{ .Get "class" | default "primary" }}">
+        {{ .Get "text" }}
+    </a>
+</div>
