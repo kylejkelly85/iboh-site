@@ -21,8 +21,25 @@
         </div>
         <div class="relative">
             <div class="rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 shadow-sm aspect-video lg:aspect-[4/3]">
-                <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
-                    [Hero Workspace/Interior Image]
+                <div class="w-full h-full overflow-hidden rounded-lg">
+                     {{ with resources.Get "images/holistic-practitioner-and-clienti.png" }}
+                        {{ $avif := .Resize "1600x avif q80" }}
+                        {{ $webp := .Resize "1600x webp q85" }}
+                        {{ $jpg := .Resize "1600x jpg q90" }}
+
+                        <picture>
+                            <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
+                            <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+
+                            <img
+                                src="{{ $jpg.RelPermalink }}"
+                                width="{{ $jpg.Width }}"
+                                height="{{ $jpg.Height }}"
+                                alt="Holistic practitioner working with client"
+                                class="w-full h-full object-cover"
+                            >
+                        </picture>
+                    {{ end }}
                 </div>
             </div>
             <div class="absolute -bottom-6 -left-6 bg-white border border-gray-200 rounded-xl p-4 flex items-center gap-3 max-w-[240px] shadow-sm">
