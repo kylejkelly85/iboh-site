@@ -30,7 +30,7 @@ Whether your practice is rooted in ancient traditions or modern integrative appr
 {{< button
     url="/process/"
     text="See the Full Certification Process →"
-    class="secondary" >}}
+>}}
 
 {{< quote author="The IBOH Founding Team" >}}
 "We believe every dedicated holistic practitioner deserves the same professional recognition afforded to conventional health providers. The IBOH exists to build that bridge — between calling and career, between intuition and institutional trust."
