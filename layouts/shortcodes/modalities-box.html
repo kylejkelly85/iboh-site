@@ -1,3 +1,11 @@
-<div class="modalities-box">
-  {{ .Inner | markdownify }}
+<div class="my-12 rounded-2xl bg-slate-50 p-8">
+    <div class="flex flex-wrap justify-center gap-3">
+
+        {{ range (split (.Inner | plainify) "·") }}
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm border border-slate-200">
+                {{ . | strings.TrimSpace }}
+            </span>
+        {{ end }}
+
+    </div>
 </div>

@@ -24,7 +24,7 @@ This isn't about gatekeeping your gift. It's about giving your gift the professi
 The HHC designation is designed for experienced practitioners across a wide range of holistic, integrative, and intuitive modalities, including but not limited to:
 
 {{< modalities-box >}}
-_Energy Healing & Reiki · Intuitive & Psychic Guidance · Somatic & Bodywork Practices · Herbalism & Naturopathy · Sound Healing · Breathwork · Life & Wellness Coaching · Crystal Healing · Shamanic Practices · Meditation & Mindfulness Facilitation · Aromatherapy · Holistic Nutrition · Spiritual Counseling · Hypnotherapy · Reflexology · Acupressure · EFT / Tapping · Ayurvedic Practices_
+Energy Healing & Reiki · Intuitive & Psychic Guidance · Somatic & Bodywork Practices · Herbalism & Naturopathy · Sound Healing · Breathwork · Life & Wellness Coaching · Crystal Healing · Shamanic Practices · Meditation & Mindfulness Facilitation · Aromatherapy · Holistic Nutrition · Spiritual Counseling · Hypnotherapy · Reflexology · Acupressure · EFT / Tapping · Ayurvedic Practices
 {{< /modalities-box >}}
 
 Whether your practice is rooted in ancient traditions or modern integrative approaches, the IBOH provides a universal professional framework that transcends any single modality.
