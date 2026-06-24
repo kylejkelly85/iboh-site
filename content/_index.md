@@ -14,8 +14,12 @@ Holistic healing is growing rapidly — but without universal standards, prospec
 
 An IBOH Board Designation tells the world that you've been evaluated against professional standards, that you operate under a published Code of Ethics, and that your credentials can be independently verified.
 
+{{< center-heading >}}
 This isn't about gatekeeping your gift. It's about giving your gift the professional recognition it deserves.
+{{< /center-heading >}}
+
 {{< features-grid >}}
+
 ---
 {{< center-heading >}}
 Built for Practitioners Across the Holistic Spectrum
