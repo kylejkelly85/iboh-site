@@ -1,82 +1,128 @@
-<header class="w-full bg-[#e4e2de] relative">
-    
-    {{/* Solid, fixed ID to guarantee the template compiles flawlessly */}}
+<header class="w-full bg-surface border-b border-border shadow-sm relative">
+
     {{ $menuId := "mobile-nav-toggle-checkbox" }}
-    
+
     <input type="checkbox" id="{{ $menuId }}" class="peer hidden" />
 
     <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
-        
+
         <div class="flex items-center">
             <a href="/" class="flex items-center">
-                <span class="hidden font-black text-[18px] text-iboh-logo-gray">IBOH</span>
+
+                <span class="hidden font-black text-[18px] text-primary">IBOH</span>
+
                 {{ with resources.Get "images/iboh_black.png" }}
-                    {{/* Process the local image file to a 40px tall AVIF automatically */}}
                     {{ $logoAvif := .Resize "x40 avif" }}
-                    <img src="{{ $logoAvif.RelPermalink }}" width="{{ $logoAvif.Width }}" height="{{ $logoAvif.Height }}" alt="IBOH" class="h-10 w-auto block object-contain" />
+                    <img
+                        src="{{ $logoAvif.RelPermalink }}"
+                        width="{{ $logoAvif.Width }}"
+                        height="{{ $logoAvif.Height }}"
+                        alt="IBOH"
+                        class="h-10 w-auto block object-contain"
+                    />
                 {{ else }}
-                    <!-- Fallback text if the image asset file is missing -->
-                    <span class="text-xl font-bold">IBOH</span>
+                    <span class="text-xl font-bold text-primary">IBOH</span>
                 {{ end }}
+
             </a>
         </div>
 
         <div class="hidden md:flex items-center">
-            <nav class="flex items-center space-x-[40px] text-[16px] font-medium text-iboh-logo-gray">
+
+            <nav class="flex items-center space-x-10 text-[16px] font-medium">
+
                 {{ $currentPage := . }}
+
                 {{ range .Site.Menus.main }}
+
                     {{ $linkUrl := "" }}
+
                     {{ if .Page }}
                         {{ $linkUrl = .Page.RelPermalink }}
                     {{ else }}
                         {{ $linkUrl = .URL | relURL }}
                     {{ end }}
-                    <a 
-                        href="{{ $linkUrl }}" 
-                        class="hover:text-iboh-dark transition duration-150 {{ if $currentPage.IsMenuCurrent "main" . }}font-bold text-iboh-dark{{ end }}"
+
+                    <a
+                        href="{{ $linkUrl }}"
+                        class="
+                            transition-colors duration-150
+                            hover:text-secondary
+                            {{ if $currentPage.IsMenuCurrent "main" . }}
+                                text-secondary font-semibold
+                            {{ else }}
+                                text-primary
+                            {{ end }}
+                        "
                     >
                         {{ .Name }}
                     </a>
+
                 {{ end }}
+
             </nav>
+
         </div>
 
         <div class="md:hidden flex items-center">
-            <label 
-                for="{{ $menuId }}" 
-                class="flex flex-col gap-[5px] cursor-pointer" 
+
+            <label
+                for="{{ $menuId }}"
+                class="flex flex-col gap-[5px] cursor-pointer"
                 role="button"
                 aria-label="Toggle navigation menu"
                 aria-expanded="false"
                 tabindex="0"
             >
-                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
-                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
-                <span class="w-[33px] h-[4px] bg-[#4a4a4a] rounded-[3px]"></span>
+                <span class="w-[32px] h-[3px] bg-primary rounded"></span>
+                <span class="w-[32px] h-[3px] bg-primary rounded"></span>
+                <span class="w-[32px] h-[3px] bg-primary rounded"></span>
             </label>
+
         </div>
 
     </div>
 
-    <div class="hidden peer-checked:block md:hidden absolute left-0 top-full w-full bg-[#e4e2de] border-t border-black/5 z-50 shadow-lg">
-        <nav class="flex flex-col p-6 space-y-4 text-[16px] font-medium text-iboh-logo-gray">
+    <div class="hidden peer-checked:block md:hidden absolute left-0 top-full w-full bg-surface border-t border-border z-50 shadow-lg">
+
+        <nav class="flex flex-col p-6">
+
             {{ $currentPage := . }}
+
             {{ range .Site.Menus.main }}
+
                 {{ $linkUrl := "" }}
+
                 {{ if .Page }}
                     {{ $linkUrl = .Page.RelPermalink }}
                 {{ else }}
                     {{ $linkUrl = .URL | relURL }}
                 {{ end }}
+
                 <label for="{{ $menuId }}" class="cursor-pointer">
-                    <a 
-                        href="{{ $linkUrl }}" 
-                        class="block hover:text-iboh-dark py-2 border-b border-black/5 transition duration-150 {{ if $currentPage.IsMenuCurrent "main" . }}font-bold{{ end }}"
+
+                    <a
+                        href="{{ $linkUrl }}"
+                        class="
+                            block py-3 border-b border-border
+                            transition-colors duration-150
+                            hover:text-secondary
+                            {{ if $currentPage.IsMenuCurrent "main" . }}
+                                text-secondary font-semibold
+                            {{ else }}
+                                text-primary
+                            {{ end }}
+                        "
                     >
                         {{ .Name }}
                     </a>
+
                 </label>
+
             {{ end }}
+
         </nav>
+
     </div>
+
 </header>

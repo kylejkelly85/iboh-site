@@ -1,3 +1,61 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @source "hugo_stats.json";
+
+@theme {
+  --color-primary: #31475B;
+  --color-secondary: #8FA382;
+  --color-accent: #C9B27C;
+
+  --color-ivory: #F7F5EF;
+  --color-surface: #FFFFFF;
+
+  --color-body: #374151;
+  --color-muted: #7C8590;
+  --color-border: #E7E4DD;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-primary);
+  }
+
+  a {
+    color: var(--color-secondary);
+  }
+
+  hr {
+    border-color: var(--color-border);
+  }
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center px-6 py-3 rounded-xl bg-secondary text-white font-semibold hover:opacity-90 transition;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:opacity-90 transition;
+}
+
+@utility btn-banner {
+  @apply inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-secondary text-white font-semibold hover:opacity-90 transition;
+}
+
+@utility prose-brand {
+  --tw-prose-body: var(--color-body);
+  --tw-prose-headings: var(--color-primary);
+  --tw-prose-links: var(--color-secondary);
+  --tw-prose-bold: var(--color-primary);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-bullets: var(--color-secondary);
+  --tw-prose-counters: var(--color-secondary);
+}

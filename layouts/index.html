@@ -1,29 +1,27 @@
 {{ define "main" }}
 
-<main class="w-full bg-white">
-    
-    {{/* 1. CHECK IF CUSTOM BLOCKS ARE SPECIFIED IN FRONT MATTER */}}
+<main class="w-full bg-ivory">
+
     {{ if .Params.active_blocks }}
-        
+
         {{ range .Params.active_blocks }}
-            
+
             {{ if eq . "support-banner" }}
                 {{ partial "blocks/support-banner.html" $ }}
             {{ end }}
-            
+
             {{ if eq . "hero-split" }}
                 {{ partial "blocks/hero-split.html" $ }}
             {{ end }}
-            
+
             {{ if eq . "body-content" }}
-                <!-- Your original markdown text block container -->
                 <div class="max-w-6xl mx-auto px-6 lg:px-8 py-8">
-                    <article class="max-w-none text-lg text-gray-600 leading-relaxed">
+                    <article class="prose prose-brand max-w-none">
                         {{ $.Content }}
                     </article>
                 </div>
             {{ end }}
-            
+
             {{ if eq . "cta-callout" }}
                 {{ partial "blocks/cta-callout.html" $ }}
             {{ end }}
@@ -31,18 +29,17 @@
         {{ end }}
 
     {{ else }}
-        
-        {{/* 2. FALLBACK DEFAULT LAYOUT (Your original code remains untouched) */}}
-        <header class="w-full bg-[#e4e2de]/30 py-20 border-b border-black/5">
+
+        <header class="w-full bg-surface border-b border-border py-20">
             <div class="max-w-6xl mx-auto px-6 lg:px-8">
-                <h1 class="text-4xl font-extrabold text-iboh-dark md:text-5xl tracking-tight">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-primary">
                     {{ .Title }}
                 </h1>
             </div>
         </header>
 
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <article class="max-w-none text-lg text-gray-600 leading-relaxed">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+            <article class="prose prose-brand max-w-none">
                 {{ .Content }}
             </article>
         </div>
